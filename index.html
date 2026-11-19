@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Love To-Do List</title>
+  <meta name="theme-color" content="#ff4d79">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Love To-Do">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="top-bar">
+    <div id="clock" class="watch" role="img" aria-label="Clock">
+      <span class="watch-strap watch-strap-top"></span>
+      <div class="watch-case">
+        <div class="watch-face">
+          <div class="hand hand-hour" id="hand-hour"></div>
+          <div class="hand hand-minute" id="hand-minute"></div>
+          <div class="hand hand-second" id="hand-second"></div>
+          <span class="watch-pin">💗</span>
+        </div>
+      </div>
+      <span class="watch-strap watch-strap-bottom"></span>
+    </div>
+  </div>
+
+  <h1 class="page-title">nharek zin ma2oubtiii</h1>
+
+  <main class="app">
+    <header class="app-header">
+      <h2>
+        <span class="title-emoji">💖</span>
+        <span class="title-text">My Love To-Do List</span>
+        <span class="title-sparkle">💕</span>
+      </h2>
+      <p id="date" class="date"></p>
+    </header>
+
+    <form id="form" class="form" autocomplete="off">
+      <input id="input" type="text" placeholder="Add a task..." maxlength="120" aria-label="New task" required>
+      <button type="submit" aria-label="Add">+</button>
+    </form>
+
+    <section class="filters">
+      <button class="filter active" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter" data-filter="active" aria-pressed="false">To do</button>
+      <button class="filter" data-filter="completed" aria-pressed="false">Completed</button>
+    </section>
+
+    <section class="progress-wrap">
+      <div class="progress-info">
+        <span class="progress-label">Active day</span>
+        <span id="progress-text" aria-live="polite">0 / 0 · 0%</span>
+      </div>
+      <div class="progress-bar" role="progressbar" aria-label="Progress" aria-valuemin="0" aria-valuemax="100">
+        <div id="progress-fill" class="progress-fill"></div>
+      </div>
+    </section>
+
+    <ul id="list" class="list"></ul>
+
+    <section class="agenda">
+      <h3 class="agenda-title">🗓️ My agenda</h3>
+      <form id="agenda-form" class="agenda-form" autocomplete="off">
+        <input id="agenda-date" type="date" aria-label="Event date" required>
+        <input id="agenda-time" type="time" aria-label="Event time">
+        <input id="agenda-input" type="text" placeholder="Mark an event..." maxlength="100" aria-label="Event" required>
+        <button type="submit" aria-label="Add event">+</button>
+      </form>
+      <ul id="agenda-list" class="agenda-list"></ul>
+    </section>
+
+    <footer class="app-footer">
+      <span id="count" aria-live="polite">0 tasks</span>
+      <button id="clear" class="clear">Clear completed</button>
+    </footer>
+  </main>
+
+  <footer class="page-footer">
+    <button type="button" id="go-add" class="page-btn">➕ New task</button>
+    <button type="button" id="go-agenda" class="page-btn">🗓️ Agenda</button>
+    <button type="button" id="go-top" class="page-btn">⬆️ Back to top</button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
